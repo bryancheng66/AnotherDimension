@@ -44,11 +44,31 @@ public class ArrayOps {
 	public static boolean isRowMagic(int[][] matrix){
 		boolean magic = true;
 
-		for (int i = 0; magic == true && i < matrix.length;  i++){
-			if (i != matrix.length - 1 && !(sum(matrix[i]) == sum(matrix[i+1]))){
+		if (matrix.length == 0)	return magic;
+
+		for (int i = 0; magic == true && i < matrix.length - 1;  i++){
+			if (!(sum(matrix[i]) == sum(matrix[i+1]))){
 				magic = false;
 			}
 		}
 		return magic;
+	}
+
+	public static int[][] matrixRotate(int[][] matrix){
+		int [][] rotated = new int[matrix[0].length][];
+		
+		for (int i = 0; i < matrix[0].length; i++){
+			rotated[i] = new int [matrix.length];
+			for (int j = 0; j < matrix.length; j++){
+				rotated[i][j] = matrix[j][i];
+			}
+		}
+		return rotated;
+	}
+
+	public static boolean isColMagic(int[][] matrix){
+		if (matrix.length == 0) return true;
+		
+		return isRowMagic(matrixRotate(matrix));
 	}
 }

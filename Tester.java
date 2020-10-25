@@ -4,20 +4,35 @@ public class Tester {
 	public static void main(String[] Args){
 		int[] Array1 = {3,5,3,2,4,1,4};
 		int[] Array2 = {3,1,5,7,3,2};
-		int[][] Matrix1 = {{2,5,7},{3,5,2},{4,7,9}};
-		int[][]  A = { {  1,  0, 12, -1 },
-                	{  7, -2,  2,  1 },
-                	{ -5, -2,  2, -9 }
-               };
-		int[]  B  =   {  1, 3, 5 };
 
-		int[][]  Matrix2 = { 
-			{  1,  2, 3, 4 },
-   			{  2, 3,  4,  1 },
-   			{ 3, 4,  1, 2 } 
+		int[][]  A = { 
+			{ 1, 0, 12, -1 },
+                	{ 7, -2, 2, 1 },
+                	{ -5, -2, 2, -9 }
+               };
+	
+		int[] B = { 1, 3, 5};
+
+		int[][] Matrix1 = {
+			{2,5,7},
+			{3,5,2},
+			{4,7,9}
+		};
+	
+		int[][] Matrix2 = { 
+			{1, 2, 3, 4},
+   			{2, 3, 4, 1},
+   			{3, 4, 1, 2} 
 		};
 
 		int[][] Matrix3 = {};
+
+		int[][] Matrix4 = {
+			{1, 1, 1},
+			{2, 2, 2},
+			{3, 3, 3} 
+		}; 
+
 		System.out.println(ArrayOps.sum(Array1));
 		System.out.println(ArrayOps.largest(Array1));
 
@@ -45,6 +60,11 @@ public class Tester {
 		
 		System.out.println(ArrayOps.isRowMagic(Matrix2));
 		System.out.println(ArrayOps.isRowMagic(Matrix3));
+		System.out.println(ArrayOps.isRowMagic(Matrix4));
+
+		System.out.println(ArrayOps.isColMagic(Matrix2));
+		System.out.println(ArrayOps.isColMagic(Matrix3));
+		System.out.println(ArrayOps.isColMagic(Matrix4));
 
 	}
 }
