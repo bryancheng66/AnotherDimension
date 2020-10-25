@@ -13,6 +13,11 @@ public class Tester {
 	
 		int[] B = { 1, 3, 5};
 
+		int[][] E = {
+			{2, 4, 2},
+			{2, 2, 2}
+		};
+
 		int[][] Matrix1 = {
 			{2,5,7},
 			{3,5,2},
@@ -66,5 +71,7 @@ public class Tester {
 		System.out.println(ArrayOps.isColMagic(Matrix3));
 		System.out.println(ArrayOps.isColMagic(Matrix4));
 
+		System.out.println(ArrayOps.isLocationMagic(E, 0, 1));
+		System.out.println(ArrayOps.isLocationMagic(E, 1, 1));
 	}
 }

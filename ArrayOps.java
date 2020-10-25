@@ -44,7 +44,7 @@ public class ArrayOps {
 	public static boolean isRowMagic(int[][] matrix){
 		boolean magic = true;
 
-		if (matrix.length == 0)	return magic;
+		if (matrix.length == 0)	return true;
 
 		for (int i = 0; magic == true && i < matrix.length - 1;  i++){
 			if (!(sum(matrix[i]) == sum(matrix[i+1]))){
@@ -70,5 +70,15 @@ public class ArrayOps {
 		if (matrix.length == 0) return true;
 		
 		return isRowMagic(matrixRotate(matrix));
+	}
+
+	public static boolean isLocationMagic(int[][] matrix, int row, int col){
+		if (matrix.length == 0) return true;
+		
+		if (sum(matrix[row]) == sum(matrixRotate(matrix)[col])) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
