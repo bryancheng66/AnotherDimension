@@ -10,6 +10,14 @@ public class Tester {
                 	{ -5, -2,  2, -9 }
                };
 		int[]  B  =   {  1, 3, 5 };
+
+		int[][]  Matrix2 = { 
+			{  1,  2, 3, 4 },
+   			{  2, 3,  4,  1 },
+   			{ 3, 4,  1, 2 } 
+		};
+
+		int[][] Matrix3 = {};
 		System.out.println(ArrayOps.sum(Array1));
 		System.out.println(ArrayOps.largest(Array1));
 
@@ -34,5 +42,9 @@ public class Tester {
 		System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array version!
 		//expected output:
 		//6
+		
+		System.out.println(ArrayOps.isRowMagic(Matrix2));
+		System.out.println(ArrayOps.isRowMagic(Matrix3));
+
 	}
 }

@@ -30,4 +30,25 @@ public class ArrayOps {
 		}
 		return largestArray;
 	}
+	
+	public static int sum(int[][] arr){
+		int result = 0;
+		for (int i = 0; i < arr.length; i++){
+			for (int j = 0; j < arr[i].length; j++){
+				result += arr[i][j];
+			}
+		}
+		return result;
+	}
+
+	public static boolean isRowMagic(int[][] matrix){
+		boolean magic = true;
+
+		for (int i = 0; magic == true && i < matrix.length;  i++){
+			if (i != matrix.length - 1 && !(sum(matrix[i]) == sum(matrix[i+1]))){
+				magic = false;
+			}
+		}
+		return magic;
+	}
 }
