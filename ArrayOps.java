@@ -41,6 +41,12 @@ public class ArrayOps {
 		return result;
 	}
 
+	public static int[] sumCols(int[][] matrix){
+		if (matrix.length == 0) return new int[0];
+
+		return sumRows(matrixRotate(matrix));
+	}
+
 	public static boolean isRowMagic(int[][] matrix){
 		boolean magic = true;
 

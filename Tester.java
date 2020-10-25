@@ -63,6 +63,8 @@ public class Tester {
 		//expected output:
 		//6
 		
+		System.out.println(Arrays.toString(ArrayOps.sumCols(A)));
+
 		System.out.println(ArrayOps.isRowMagic(Matrix2));
 		System.out.println(ArrayOps.isRowMagic(Matrix3));
 		System.out.println(ArrayOps.isRowMagic(Matrix4));
